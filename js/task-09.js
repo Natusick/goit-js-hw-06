@@ -1,19 +1,20 @@
 const refs = {
-bodyEl: document.querySelector('body'),
-spanEl: document.querySelector('span'),
-buttonEl: document.querySelector('button'),
+bodyEl: document.querySelector("body"),
+spanEl: document.querySelector(".color"),
+buttonEl: document.querySelector(".change-color"),
 };
 
-refs.buttonEl.addEventListener('input', bodyElChange);
+refs.buttonEl.addEventListener('click',bodyElChange );
+  
+
 function bodyElChange(event){
-  refs.bodyEl.style.backgroundColor = currentColor;
-  refs.spanEl.style.backgroundColor = currentColor;
-    
+  const currentColor = getRandomHexColor();
+  refs.spanEl.textContent = currentColor;
+  refs.bodyEl.style.backgroundColor = currentColor;   
 };
 
-const currentColor = () =>  {
+function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-};
-
+}
 
 
