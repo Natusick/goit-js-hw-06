@@ -23,7 +23,10 @@ button {
   cursor: pointer;
 }
 
-.gallery-flex{
+.gallery-item{
   margin: 10px;
-  flex-wrap: wrap;
+  list-style: none;
+  display: inline-flex;
 }
+
+
