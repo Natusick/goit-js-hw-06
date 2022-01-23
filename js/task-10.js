@@ -26,7 +26,7 @@ refs.buttonCreate.addEventListener('click', (event) => {
 refs.buttonDestroy.addEventListener(`click`, (event)=>{
   refs.boxesEl.innerHTML =``;
   refs.inputEl.value = "";
-  refs.boxesEl.remove();
+  
 });
 
 function getRandomHexColor() {
